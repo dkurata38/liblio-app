@@ -2,11 +2,9 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BooksSearchComponent} from './books-search.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatInputModule} from "@angular/material/input";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MatButtonModule} from "@angular/material/button";
-import {MatTableModule} from "@angular/material/table";
+import {FormsModule} from "@angular/forms";
 import {BookTableModule} from "./presenter/book-table/book-table.module";
+import {BookSearchFormModule} from "./presenter/book-search-form/book-search-form.module";
 
 @NgModule({
   declarations: [
@@ -15,12 +13,9 @@ import {BookTableModule} from "./presenter/book-table/book-table.module";
   imports: [
     CommonModule,
     MatToolbarModule,
-    MatInputModule,
     FormsModule,
-    MatButtonModule,
-    MatTableModule,
-    ReactiveFormsModule,
     BookTableModule,
+    BookSearchFormModule,
   ],
   exports: [
     BooksSearchComponent,

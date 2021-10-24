@@ -3,17 +3,9 @@
 </mat-toolbar>
 
 <div class="container">
-  <form class="search-form" [formGroup]="searchForm" style="max-width: 1080px; margin: 0 auto;">
-    <mat-form-field appearance="outline" style="width: 100%">
-      <mat-label>キーワード</mat-label>
-      <input matInput type="search" formControlName="keyword">
-    </mat-form-field>
-    <button mat-raised-button>検索</button>
-  </form>
-
+  <app-book-search-form (submitted)="search($event)"></app-book-search-form>
   <app-book-table [books]="books$ | async"></app-book-table>
-
-  <p>{{searchForm.get('keyword')?.value}}</p>
+  <p>{{value.keyword}}</p>
 </div>
 
 

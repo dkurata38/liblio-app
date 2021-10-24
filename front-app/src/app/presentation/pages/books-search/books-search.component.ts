@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Book} from "./books-search.model";
-import {FormBuilder, FormGroup} from "@angular/forms";
 import {Observable, of} from "rxjs";
+import {BookSearchFormValue} from "./presenter/book-search-form/book-search-form.model";
 
 @Component({
   selector: 'app-books-search',
@@ -10,14 +10,13 @@ import {Observable, of} from "rxjs";
 })
 export class BooksSearchComponent implements OnInit {
 
-  searchForm: FormGroup;
-
   books$!: Observable<Book[]>;
 
-  constructor(private readonly formBuilder: FormBuilder) {
-    this.searchForm = formBuilder.group({
-      keyword: ''
-    });
+  value: BookSearchFormValue = {
+    keyword: ''
+  };
+
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -31,5 +30,9 @@ export class BooksSearchComponent implements OnInit {
       }],
       publishedOn: new Date(Date.parse('2021-10-14')),
     }]);
+  }
+
+  search(event: BookSearchFormValue): void {
+    this.value = event;
   }
 }

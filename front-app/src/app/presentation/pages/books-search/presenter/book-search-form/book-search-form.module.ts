@@ -11,6 +11,9 @@ import {MatButtonModule} from "@angular/material/button";
   declarations: [
     BookSearchFormComponent
   ],
+  exports: [
+    BookSearchFormComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
