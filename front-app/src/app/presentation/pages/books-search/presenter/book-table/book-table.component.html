@@ -1,0 +1,24 @@
+<table mat-table class="book-table" *ngIf="books != null" [dataSource]="books" style="width: 100%">
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef style="width: 40%">タイトル</th>
+    <td mat-cell *matCellDef="let book"> {{book.title}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="author">
+    <th mat-header-cell *matHeaderCellDef style="width: 20%">著者</th>
+    <td mat-cell *matCellDef="let book"> {{getAuthor(book)}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="format">
+    <th mat-header-cell *matHeaderCellDef style="width: 20%">形式</th>
+    <td mat-cell *matCellDef="let book"> {{book.format}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="publishedOn">
+    <th mat-header-cell *matHeaderCellDef style="width: 20%">出版日</th>
+    <td mat-cell *matCellDef="let book"> {{formatDate(book.publishedOn)}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+  <tr mat-row *matRowDef="let book; columns: displayColumns"></tr>
+</table>
