@@ -1,0 +1,9 @@
+<form class="search-form" [formGroup]="searchForm">
+  <div class="form-row">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>キーワード</mat-label>
+      <input matInput type="search" formControlName="keyword">
+    </mat-form-field>
+  </div>
+  <button mat-raised-button (click)="submit()">検索</button>
+</form>
