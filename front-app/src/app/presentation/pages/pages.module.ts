@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 
 import {PagesRoutingModule} from './pages-routing.module';
 import {BooksSearchModule} from "./books-search/books-search.module";
+import { PagesComponent } from './pages.component';
+import {ToolbarModule} from "./toolbar/toolbar.module";
 
 
 @NgModule({
@@ -10,6 +12,10 @@ import {BooksSearchModule} from "./books-search/books-search.module";
     CommonModule,
     PagesRoutingModule,
     BooksSearchModule,
+    ToolbarModule,
+  ],
+  declarations: [
+    PagesComponent
   ]
 })
 export class PagesModule {

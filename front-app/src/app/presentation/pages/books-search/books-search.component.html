@@ -1,9 +1,5 @@
-<app-toolbar></app-toolbar>
-
-<div class="container">
-  <app-book-search-form (submitted)="search($event)"></app-book-search-form>
-  <app-book-table [books]="books$ | async"></app-book-table>
-  <p>{{value.keyword}}</p>
-</div>
+<app-book-search-form (submitted)="search($event)"></app-book-search-form>
+<app-book-table [books]="books$ | async"></app-book-table>
+<p>{{value.keyword}}</p>
 
 
