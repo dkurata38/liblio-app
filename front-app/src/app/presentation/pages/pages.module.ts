@@ -5,6 +5,7 @@ import {PagesRoutingModule} from './pages-routing.module';
 import {BooksSearchModule} from "./books-search/books-search.module";
 import { PagesComponent } from './pages.component';
 import {ToolbarModule} from "./toolbar/toolbar.module";
+import {LoginModule} from "./login/login.module";
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import {ToolbarModule} from "./toolbar/toolbar.module";
     CommonModule,
     PagesRoutingModule,
     BooksSearchModule,
+    LoginModule,
     ToolbarModule,
   ],
   declarations: [
