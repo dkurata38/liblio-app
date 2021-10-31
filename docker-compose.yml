@@ -8,4 +8,5 @@ services:
       - ./front-app:/projects
     ports:
       - "4200:4200"
+      - "6006:6006"
     entrypoint: ng serve --host 0.0.0.0 --disable-host-check
